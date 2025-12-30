@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year My Love 💙</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    overflow:hidden;
+}
+.center{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* ===== STEP 1 ===== */
+#step1{background:#bde7ff;}
+h1{font-size:3em;color:#03396c;}
+
+.gift{
+    font-size:90px;
+    cursor:pointer;
+    animation:bounce 1.5s infinite;
+}
+@keyframes bounce{50%{transform:translateY(-15px);} }
+
+#shayari{
+    display:none;
+    background:rgba(255,255,255,0.9);
+    padding:18px;
+    border-radius:18px;
+    color:black;
+    font-size:0.9em;
+    line-height:1.6;
+    margin-top:20px;
+}
+
+#next1{
+    display:none;
+    margin-top:15px;
+    font-size:1.2em;
+    cursor:pointer;
+}
+
+/* floating hearts */
+.heart{
+    position:absolute;
+    bottom:-20px;
+    font-size:22px;
+    animation:floatUp 6s linear infinite;
+}
+@keyframes floatUp{
+    to{transform:translateY(-110vh);opacity:0;}
+}
+
+/* ===== STEP 2 ===== */
+#step2{
+    display:none;
+    background:radial-gradient(circle,#020b1c,#000);
+    color:white;
+}
+
+#step2Text{
+    max-width:90%;
+    font-size:1.2em;
+    line-height:1.6;
+    margin-bottom:40px;
+    min-height:110px;
+}
+
+.heartWrap{
+    position:absolute;
+    top:55%;
+    text-align:center;
+    animation:beat 1.2s infinite;
+}
+@keyframes beat{50%{transform:scale(1.2);} }
+
+.you{left:15%;}
+.me{right:15%;}
+.move-you{left:45%;transition:3s;}
+.move-me{right:45%;transition:3s;}
+
+.label{font-size:1em;}
+.icon{font-size:80px;}
+
+#finalHeart{
+    display:none;
+    font-size:120px;
+}
+
+#next2{
+    margin-top:260px;
+    font-size:1.1em;
+    cursor:pointer;
+}
+
+/* ===== STEP 3 ===== */
+#step3{
+    display:none;
+    background:linear-gradient(#020b1c,#000);
+    color:white;
+}
+
+.promise{
+    opacity:0;
+    font-size:1.4em;
+    margin:14px 0;
+    animation:fade 1s forwards;
+}
+@keyframes fade{to{opacity:1;}}
+
+.choose{
+    font-size:2.3em;
+    color:#ff4d6d;
+}
+
+.kiss{
+    font-size:70px;
+    cursor:pointer;
+    animation:pulse 1.2s infinite;
+}
+@keyframes pulse{50%{transform:scale(1.2);}}
+
+/* ===== STEP 4 ===== */
+#step4{
+    display:none;
+    background:#fff5f8;
+    color:#ff4d6d;
+}
+.cake{font-size:120px;}
+.candle{
+    font-size:40px;
+    animation:flicker .6s infinite;
+}
+@keyframes flicker{50%{opacity:.4;}}
+
+.hidden{display:none;}
+</style>
+</head>
+
+<body>
+
+<!-- STEP 1 -->
+<div id="step1" class="center">
+<div>
+<h1>💙 Happy New Year My Love 💙</h1>
+
+<div class="gift" onclick="openGift()">🎁</div>
+
+<div id="shayari">
+हे वर्ष चांगलंही होतं, वाईटही होतं…<br>
+चुका झाल्या, दुरावा आला,<br>
+पण तरीही आपण एकमेकांपासून कधीच दूर गेलो नाही ❤️<br><br>
+
+लाँग डिस्टन्स जमणार नाही असं वाटलं होतं,<br>
+नातं टिकणार नाही असंही वाटलं…<br>
+पण भांडत, रडत, हसत, मस्ती करत<br>
+हे एक वर्ष आपण एकत्र पार केलं 🥺<br><br>
+
+रुसणं, फुगणं, भांडणं…<br>
+आणि तरीही समजून घेणं,<br>
+एकमेकांची काळजी घेणं —<br>
+हेच माझ्यासाठी प्रेम आहे ❤️<br><br>
+
+<b>माझं तुझ्यावर खूप प्रेम आहे ❤️</b>
+</div>
+
+<div id="next1" onclick="goStep2()">Next ➡️</div>
+</div>
+</div>
+
+<!-- STEP 2 -->
+<div id="step2" class="center">
+<div>
+<div id="step2Text">
+We are far…<br>
+but our hearts are still<br>
+very close to each other ❤️
+</div>
+
+<div class="heartWrap you" id="you">
+<div class="label">You</div>
+<div class="icon">❤️</div>
+</div>
+
+<div class="heartWrap me" id="me">
+<div class="label">Me</div>
+<div class="icon">❤️</div>
+</div>
+
+<div id="finalHeart">💖</div>
+
+<div id="next2" onclick="heartAction()">Always Us ❤️</div>
+</div>
+</div>
+
+<!-- STEP 3 -->
+<div id="step3" class="center">
+<div>
+<div class="promise">Mistakes happened…</div>
+<div class="promise">Hearts got hurt…</div>
+<div class="promise">But we never quit ❤️</div>
+
+<div class="choose">I CHOOSE YOU 💖</div>
+
+<div class="kiss" onclick="goStep4()">💋</div>
+<div>Click the kiss</div>
+</div>
+</div>
+
+<!-- STEP 4 -->
+<div id="step4" class="center">
+<div>
+<h1>🎉 Happy New Year My Love 🎉</h1>
+<div class="cake">🎂</div>
+<div class="candle" id="candle">🕯️🕯️🕯️</div>
+
+<div onclick="blowCandle()" style="cursor:pointer;">
+Blow the candle 💨
+</div>
+
+<div id="endMsg" class="hidden">
+Forever Us ❤️<br>
+I love you endlessly 💙
+</div>
+</div>
+</div>
+
+<script>
+/* STEP 1 */
+function openGift(){
+    document.getElementById("shayari").style.display="block";
+    document.getElementById("next1").style.display="block";
+
+    setInterval(()=>{
+        let h=document.createElement("div");
+        h.className="heart";
+        h.innerHTML="❤️";
+        h.style.left=Math.random()*100+"vw";
+        document.body.appendChild(h);
+        setTimeout(()=>h.remove(),6000);
+    },600);
+}
+
+function goStep2(){
+    document.getElementById("step1").style.display="none";
+    document.getElementById("step2").style.display="flex";
+}
+
+/* STEP 2 */
+let step2Stage=0;
+function heartAction(){
+    let txt=document.getElementById("step2Text");
+    if(step2Stage===0){
+        txt.innerHTML="Distance couldn’t stop us…<br>we still chose each other ❤️";
+        document.getElementById("you").classList.add("move-you");
+        document.getElementById("me").classList.add("move-me");
+        step2Stage++;
+    }else{
+        txt.innerHTML="And today too…<br>we are ONE 💖";
+        document.getElementById("you").style.display="none";
+        document.getElementById("me").style.display="none";
+        document.getElementById("finalHeart").style.display="block";
+        setTimeout(()=>{
+            document.getElementById("step2").style.display="none";
+            document.getElementById("step3").style.display="flex";
+        },800);
+    }
+}
+
+/* STEP 4 */
+function goStep4(){
+    document.getElementById("step3").style.display="none";
+    document.getElementById("step4").style.display="flex";
+}
+
+function blowCandle(){
+    document.getElementById("candle").innerHTML="💨💨💨";
+    document.getElementById("endMsg").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
